@@ -1,0 +1,12 @@
+*.keras
+*.h5
+*.sh
+pycache/
+*.pyc
+venv/
+.idea/
+*.ipynb_checkpoints/
+
+*.log
+*.cache
+*.swp
