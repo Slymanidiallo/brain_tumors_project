@@ -27,7 +27,9 @@ This repository contains an experimental deep-learning workflow for image classi
 └── README.md
 ```
 
-The data-loading and model implementation modules are located under `models/`. The exact dataset structure and class mapping should be checked in those modules before running the pipeline.
+The data-loading and model implementation modules are located under `models/`. The training data is expected under `data/training/` and `data/testing/`, using class-specific subdirectories compatible with `torchvision.datasets.ImageFolder`.
+
+**Repository hygiene:** a local Python virtual environment (`.venv/`) and generated Python bytecode are currently tracked in Git. A `.gitignore` has been added to prevent new local environment/cache files from being added, but already tracked `.venv/` files still need a dedicated removal commit. The ignore rule alone does not untrack existing files.
 
 ### Run
 Create a virtual environment and install the frameworks and packages imported by the project (PyTorch, TensorFlow and the project's other dependencies). Then run:
